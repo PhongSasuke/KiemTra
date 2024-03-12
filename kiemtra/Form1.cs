@@ -21,5 +21,23 @@ namespace kiemtra
         {
 
         }
+
+        private void btnlogin_Click(object sender, EventArgs e)
+        {
+            string username = txtusername.Text;
+            string password = txtpassword.Text;
+
+            if (username == "admin" && password == "admin")
+            {
+                // Chuyển sang trang đăng nhập thành công
+                FormDangNhap form2 = new FormDangNhap();
+                form2.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Tên đăng nhập hoặc mật khẩu không chính xác!");
+            }
+        }
     }
 }
